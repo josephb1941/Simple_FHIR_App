@@ -14,9 +14,25 @@ function onReady(smart)  {
 	// alert(patient.gender);
 	
 	
-	var pt = patient.read();
+	// var pt = patient.read();
 	
-	console.log(pt.gender);
+	// console.log(pt.gender);
+	
+	patient.read().then(function(pt) {
+          alert("I finished");
+		  console.log(pt);
+        });
+	
+	// var promise = new Promise(function(resolve, reject) {
+  // // do a thing, possibly async, then…
+
+		// if (/* everything turned out fine */) {
+			// resolve("Stuff worked!");
+		// }
+		// else {
+			// reject(Error("It broke"));
+		// }
+	// });
 	
 	// alert(JSON.stringify(smart.patient.api));
 	
