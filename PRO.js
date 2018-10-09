@@ -16,7 +16,7 @@ function onReady(smart)  {
 	
 	var pt = patient.read();
 	
-	console.log(pt);
+	console.log(pt.gender);
 	
 	// alert(JSON.stringify(smart.patient.api));
 	
