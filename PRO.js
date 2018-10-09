@@ -11,12 +11,15 @@ function onReady(smart)  {
   if (smart.hasOwnProperty('patient')) {
 	var patient = smart.patient;
 	
-	console.log(patient);
+	// console.log(patient);
 	
 	
 	// var pt = patient.read();
 	
 	// console.log(pt.gender);
+	
+	// patient.read().promise();
+	
 	
 	// patient.read().then(function(pt) {
           // alert("I finished");
@@ -45,6 +48,10 @@ function onReady(smart)  {
 						  // 'http://loinc.org|2089-1', 'http://loinc.org|55284-4']
 				  // }
 				// }
+	var obv = smart.patient.api.fetchAll({
+				type: 'Observation',
+				query: {}
+	}).then(function(obv) {alert("I got my obs");};);
   }}
  
  
