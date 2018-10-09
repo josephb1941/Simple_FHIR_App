@@ -33,6 +33,8 @@ function onReady(smart)  {
  
 	// FHIR.oauth2.ready(onReady, onError);
 	
+	alert("FHIR FIRE!");
+	
 	
  }
 
