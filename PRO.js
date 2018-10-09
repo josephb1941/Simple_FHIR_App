@@ -11,17 +11,17 @@ function onReady(smart)  {
   if (smart.hasOwnProperty('patient')) {
 	var patient = smart.patient;
 	
-	// alert(patient.gender);
+	console.log(patient);
 	
 	
 	// var pt = patient.read();
 	
 	// console.log(pt.gender);
 	
-	patient.read().then(function(pt) {
-          alert("I finished");
-		  console.log(pt);
-        });
+	// patient.read().then(function(pt) {
+          // alert("I finished");
+		  // console.log(pt);
+        // });
 	
 	// var promise = new Promise(function(resolve, reject) {
   // // do a thing, possibly async, then…
