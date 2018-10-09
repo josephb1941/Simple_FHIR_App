@@ -51,7 +51,7 @@ function onReady(smart)  {
 	var obv = smart.patient.api.fetchAll({
 				type: 'Observation',
 				query: {}
-	}).then(function(obv) {alert("I got my obs");};);
+	}).then(function(obv) {alert("I got my obs");});
   }}
  
  
