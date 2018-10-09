@@ -12,9 +12,11 @@ function onReady(smart)  {
 	var patient = smart.patient;
 	
 	// alert(patient.gender);
-	console.log(patient);
 	
-	// var pt = patient.read();
+	
+	var pt = patient.read();
+	
+	console.log(pt);
 	
 	// alert(JSON.stringify(smart.patient.api));
 	
