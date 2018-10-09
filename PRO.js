@@ -7,7 +7,7 @@ function onLoad() {
 
 function onReady(smart)  {
 	
-	alert("I'm ready!");
+	alert("Do I have it? " + smart.hasOwnProperty('patient'));
   // if (smart.hasOwnProperty('patient')) {
 	// var patient = smart.patient;
 	// var pt = patient.read();
