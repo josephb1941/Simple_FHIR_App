@@ -6,6 +6,8 @@ function onLoad() {
 }
 
 function onReady(smart)  {
+	
+	alert("I'm ready!");
   // if (smart.hasOwnProperty('patient')) {
 	// var patient = smart.patient;
 	// var pt = patient.read();
@@ -33,7 +35,9 @@ function onReady(smart)  {
  
 	// FHIR.oauth2.ready(onReady, onError);
 	
-	alert("FHIR FIRE!");
+	alert(FHIR);
+	
+	// alert("FHIR FIRE!");
 	
 	
  }
