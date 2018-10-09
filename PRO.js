@@ -7,9 +7,12 @@ function onLoad() {
 
 function onReady(smart)  {
 	
-	alert("Do I have it? " + smart.hasOwnProperty('patient'));
-  // if (smart.hasOwnProperty('patient')) {
-	// var patient = smart.patient;
+	// alert("Do I have it? " + smart.hasOwnProperty('patient'));
+  if (smart.hasOwnProperty('patient')) {
+	var patient = smart.patient;
+	
+	alert(patient);
+	
 	// var pt = patient.read();
 	// var obv = smart.patient.api.fetchAll({
 				// type: 'Observation',
@@ -19,7 +22,7 @@ function onReady(smart)  {
 						  // 'http://loinc.org|8480-6', 'http://loinc.org|2085-9',
 						  // 'http://loinc.org|2089-1', 'http://loinc.org|55284-4']
 				  // }
-				// }
+				}
  }
  
  
