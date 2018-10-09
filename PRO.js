@@ -33,9 +33,9 @@ function onReady(smart)  {
  
  function doFHIR() {
  
-	// FHIR.oauth2.ready(onReady, onError);
+	FHIR.oauth2.ready(onReady, onError);
 	
-	alert(FHIR);
+	// alert(FHIR);
 	
 	// alert("FHIR FIRE!");
 	
