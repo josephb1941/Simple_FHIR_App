@@ -11,11 +11,12 @@ function onReady(smart)  {
   if (smart.hasOwnProperty('patient')) {
 	var patient = smart.patient;
 	
+	// alert(patient.gender);
+	console.log(patient);
 	
+	// var pt = patient.read();
 	
-	var pt = patient.read();
-	
-	alert(JSON.stringify(smart.patient.api));
+	// alert(JSON.stringify(smart.patient.api));
 	
 	// var obv = smart.patient.api.fetchAll({
 				// type: 'Observation',
@@ -25,7 +26,7 @@ function onReady(smart)  {
 						  // 'http://loinc.org|8480-6', 'http://loinc.org|2085-9',
 						  // 'http://loinc.org|2089-1', 'http://loinc.org|55284-4']
 				  // }
-				}
+				// }
  }
  
  
