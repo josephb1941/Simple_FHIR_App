@@ -52,7 +52,8 @@ function onReady(smart)  {
 				type: 'Observation',
 				query: {}
 	}).then(function(obv) {
-		alert("I got my obs");
+		// alert("I got my obs");
+		console.log(obv);
 		
 		});
   }}
