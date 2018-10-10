@@ -19,6 +19,13 @@ function badness() {
 }
 
 
+function doHappy() {
+	
+		alert("oh yeah!");
+
+	
+}
+
 /*
 {
   "resourceType": "AllergyIntolerance",
@@ -124,7 +131,7 @@ var entry = {
 		
 	
 	
-	smart.api.create(entry, readAllergies(smart), badness());
+	smart.api.create(entry, doHappy(), badness());
 	
 	
 	// alert("Do I have it? " + smart.hasOwnProperty('patient'));
