@@ -63,7 +63,7 @@ function onReady(smart)  {
 		console.log(obj);
 		
 		});
-  }}
+  }
  
  
  function onError() {
