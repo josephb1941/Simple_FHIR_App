@@ -53,7 +53,7 @@ function onReady(smart)  {
 				query: {}
 	}).then(function(obv) {
 		alert("I got my obs");
-		console.log(obv);
+		
 		});
   }}
  
