@@ -49,11 +49,18 @@ function onReady(smart)  {
 				  // }
 				// }
 	var obv = smart.patient.api.fetchAll({
-				type: 'Observation',
+				type: 'Observation'
+				
 				query: {}
-	}).then(function(obv) {
-		// alert("I got my obs");
-		console.log(obv);
+	}, {			type: 'AllergyIntolerance'
+				}
+				query: {}
+	}
+	
+	
+	).then(function(obj) {
+		alert("I got my obs");
+		console.log(obj);
 		
 		});
   }}
