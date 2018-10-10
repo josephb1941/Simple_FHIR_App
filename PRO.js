@@ -49,7 +49,7 @@ function onReady(smart)  {
 				  // }
 				// }
 	var obv = smart.patient.api.fetchAll({
-	{
+	
 				type: 'Observation',
 				
 				query: {}
@@ -65,6 +65,7 @@ function onReady(smart)  {
 		console.log(obj);
 		
 		});
+  }
   }
  
  
