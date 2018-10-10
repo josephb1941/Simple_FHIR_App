@@ -1,7 +1,65 @@
 function onLoad() {
 
 
-	doFHIR();
+
+var entry = {
+		resource: 
+		
+	{
+		  "resourceType": "AllergyIntolerance",
+		  "category": "medication",
+		  "criticality": "CRITL",
+		  "recordedDate": "2017-02-28T15:03:00-06:00",
+		  "status": "active",
+		  "type": "allergy",
+		  "onset": "2015-12-15T00:00:00Z",
+		  "patient": {
+			"reference": "Patient/4342012"
+		  },
+		  "reporter": {
+			"reference": "Patient/4342012"
+		  },
+		  "recorder": {
+			"reference": "Practitioner/4342012"
+		  },
+		  "reaction": [
+			{
+			  "manifestation": [
+				{
+				  "text": "Food-code_lab"
+				}
+			  ]
+			}
+		  ],
+		  "note": {
+			"authorReference": {
+			  "reference": "Practitioner/41562141"
+			},
+			"time": "2017-02-28T09:03:00Z",
+			"text": "Note 1"
+		  },
+		  "substance": {
+			"coding": [
+			  {
+				"system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+				"code": "3498"
+			  }
+			]
+		  }
+		}
+
+	}
+			
+		
+		
+	
+	
+	smart.api.create(entry, doFHIR(), badness());
+	
+
+
+
+	// doFHIR();
 	
 	
 	
@@ -9,9 +67,64 @@ function onLoad() {
 
 }
 
+function badness() {
+	
+	alert("oh no!");
+	
+}
+
+
+/*
+{
+  "resourceType": "AllergyIntolerance",
+  "category": "medication",
+  "criticality": "CRITL",
+  "recordedDate": "2017-02-28T15:03:00-06:00",
+  "status": "active",
+  "type": "allergy",
+  "onset": "2015-12-15T00:00:00Z",
+  "patient": {
+    "reference": "Patient/1316020"
+  },
+  "reporter": {
+    "reference": "Patient/1316020"
+  },
+  "recorder": {
+    "reference": "Practitioner/1316007"
+  },
+  "reaction": [
+    {
+      "manifestation": [
+        {
+          "text": "Hives"
+        }
+      ]
+    }
+  ],
+  "note": {
+    "authorReference": {
+      "reference": "Practitioner/41562141"
+    },
+    "time": "2017-02-28T09:03:00Z",
+    "text": "Note 1"
+  },
+  "substance": {
+    "coding": [
+      {
+        "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+        "code": "3498"
+      }
+    ]
+  }
+}
+
+*/
+
 function onReady(smart)  {
 	
-	console.log(smart);
+	// console.log(smart);
+	
+	
 	
 	// alert("Do I have it? " + smart.hasOwnProperty('patient'));
   if (smart.hasOwnProperty('patient')) {
