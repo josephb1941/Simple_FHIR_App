@@ -132,7 +132,20 @@ var entry = {
 		
 	
 	
-	smart.api.create(entry, doHappy(), badness());
+	smart.api.create(entry, 
+	function(e) {
+		alert("success");
+		console.log(e);
+	},
+	function(e) {
+
+		alert("fail");
+		console.log(e);
+	
+		
+	});
+	
+	//doHappy(entry), badness());
 	
 	
 	// alert("Do I have it? " + smart.hasOwnProperty('patient'));
