@@ -4,7 +4,7 @@ function onLoad() {
 
 
 
-	// doFHIR();
+	doFHIR();
 	
 	
 	
