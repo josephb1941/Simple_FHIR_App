@@ -11,6 +11,8 @@ function onLoad() {
 
 function onReady(smart)  {
 	
+	console.log(smart);
+	
 	// alert("Do I have it? " + smart.hasOwnProperty('patient'));
   if (smart.hasOwnProperty('patient')) {
 	var patient = smart.patient;
@@ -85,10 +87,10 @@ function onReady(smart)  {
  
  function doFHIR() {
  
-	// FHIR.oauth2.ready(onReady, onError);
+	FHIR.oauth2.ready(onReady, onError);
 	
 	
-	console.log(smart);
+	// console.log(smart);
 	
 	
 	// alert(FHIR);
