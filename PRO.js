@@ -2,6 +2,10 @@ function onLoad() {
 
 
 	doFHIR();
+	
+	
+	
+	
 
 }
 
@@ -81,7 +85,11 @@ function onReady(smart)  {
  
  function doFHIR() {
  
-	FHIR.oauth2.ready(onReady, onError);
+	// FHIR.oauth2.ready(onReady, onError);
+	
+	
+	console.log(smart);
+	
 	
 	// alert(FHIR);
 	
