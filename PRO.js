@@ -50,11 +50,11 @@ function onReady(smart)  {
 				// }
 	var obv = smart.patient.api.fetchAll({
 	
-				type: 'Observation',
+				type: 'AllergyIntolerance',
 				
 				query: {}
 	}, {
-		type: 'AllergyIntolerance',
+		type: 'Observation',
 		query: {}
 	
 	}
