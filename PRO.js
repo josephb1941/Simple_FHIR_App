@@ -60,9 +60,10 @@ function onReady(smart)  {
 	}
 	
 	
-	).then(function(obj) {
+	).then(function(allergies, obs) {
 		alert("I got my obs");
-		console.log(obj);
+		console.log(allergies);
+		console.log(obs);
 		
 		});
   }
