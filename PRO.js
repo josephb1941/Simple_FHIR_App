@@ -19,9 +19,10 @@ function badness() {
 }
 
 
-function doHappy() {
+function doHappy(msg) {
 	
 		alert("oh yeah!");
+		console.log(msg)
 
 	
 }
@@ -131,7 +132,7 @@ var entry = {
 		
 	
 	
-	// smart.api.create(entry, doHappy(), badness());
+	smart.api.create(entry, doHappy(resp), badness());
 	
 	
 	// alert("Do I have it? " + smart.hasOwnProperty('patient'));
