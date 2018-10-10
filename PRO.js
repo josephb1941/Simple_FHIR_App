@@ -48,6 +48,7 @@ function onReady(smart)  {
 						  // 'http://loinc.org|2089-1', 'http://loinc.org|55284-4']
 				  // }
 				// }
+
 	var obv = smart.patient.api.fetchAll({
 	
 				type: 'AllergyIntolerance',
