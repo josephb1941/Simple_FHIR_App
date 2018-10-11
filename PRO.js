@@ -101,6 +101,23 @@ var testPromise = new Promise(
     }
 );
 
+
+var myPromise = function () {
+    testPromise
+        .then(function (fulfilled) {
+            // yay, you got a new phone
+            alert(fulfilled);
+         // output: { brand: 'Samsung', color: 'black' }
+        })
+        .catch(function (error) {
+            // oops, mom don't buy it
+            alert(error.message);
+         // output: 'mom is not happy'
+        });
+};
+
+
+ myPromise();
 	
 	
 	
