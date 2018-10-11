@@ -1,10 +1,10 @@
 function onLoad() {
 
 
+	askMom();
 
 
-
-	doFHIR();
+	// doFHIR();
 	
 	
 	
@@ -131,19 +131,22 @@ var entry = {
 		
 		
 	
-	
+	/*
 	smart.api.create(entry, 
-	function(e) {
-		alert("success");
-		console.log(e);
-	},
-	function(e) {
 
-		alert("fail");
-		console.log(e);
-	
+		function(e) {
+			alert("success");
+			console.log(e);
+		},
+		function(e) {
+
+			alert("fail");
+			console.log(e);
 		
-	});
+			
+		});
+		
+	*/
 	
 	//doHappy(entry), badness());
 	
@@ -190,6 +193,9 @@ var entry = {
 				  // }
 				// }
 
+				
+				
+				/*
 	var obv = smart.patient.api.fetchAll({
 	
 				type: 'AllergyIntolerance',
@@ -209,7 +215,11 @@ var entry = {
 		
 		});
   }
+  */
+  
+  
   }
+}
  
  
  function onError() {
@@ -236,6 +246,46 @@ var entry = {
  }
 
 
+ 
+ 
+ var isMomHappy = false;
+
+// Promise
+var willIGetNewPhone = new Promise(
+    function (resolve, reject) {
+        if (isMomHappy) {
+            var phone = {
+                brand: 'Samsung',
+                color: 'black'
+            };
+            resolve(phone); // fulfilled
+        } else {
+            var reason = new Error('mom is not happy');
+            reject(reason); // reject
+        }
+
+    }
+);
+
+
+// call our promise
+var askMom = function () {
+    willIGetNewPhone
+        .then(function (fulfilled) {
+            // yay, you got a new phone
+            console.log(fulfilled);
+         // output: { brand: 'Samsung', color: 'black' }
+        })
+        .catch(function (error) {
+            // oops, mom don't buy it
+            console.log(error.message);
+         // output: 'mom is not happy'
+        });
+};
+
+
+ 
+ 
 
 /*
 (function(window){
