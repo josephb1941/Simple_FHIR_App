@@ -83,11 +83,13 @@ function onReady2(smart)  {
 	var patient = smart.patient;
 	
 	
-	patient.read().then(function() {
+	patient.read().then(function(obj) {
 		
 		alert("I'm done with reading");
+		console.log(obj);
 		
-	}
+		
+	});
 	
 	// patient
 	
