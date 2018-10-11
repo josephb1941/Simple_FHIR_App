@@ -88,6 +88,22 @@ function onReady2(smart)  {
 	console.log(patient);
 	
 	
+	
+var testPromise = new Promise(
+    function (resolve, reject) {
+        if (patient) {
+            resolve("fulfilled"); // fulfilled
+        } else {
+            var reason = new Error('did not work');
+            reject(reason); // reject
+        }
+
+    }
+);
+
+	
+	
+	
 	// var pt = patient.read();
 	
 	// console.log(pt.gender);
@@ -301,7 +317,7 @@ var entry = {
  }
 
 
- 
+ /*
  
  var isMomHappy = false;
 
@@ -339,7 +355,7 @@ var askMom = function () {
 };
 
 
- 
+ */
  
 
 /*
