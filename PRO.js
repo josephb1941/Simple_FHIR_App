@@ -97,7 +97,7 @@ function onReady2(smart)  {
 		alert("I'm done!");
 		
 	});
-}
+
 	
 	/*
 	var willIGetNewPhone = new Promise(
