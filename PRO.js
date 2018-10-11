@@ -92,7 +92,8 @@ function onReady2(smart)  {
 var testPromise = new Promise(
     function (resolve, reject) {
         if (patient) {
-            resolve("fulfilled"); // fulfilled
+            // resolve("fulfilled"); // fulfilled
+            resolve(patient); // fulfilled
         } else {
             var reason = new Error('did not work');
             reject(reason); // reject
@@ -117,7 +118,7 @@ var myPromise = function () {
 };
 
 
- testPromise();
+ myPromise();
 	
 	
 	
