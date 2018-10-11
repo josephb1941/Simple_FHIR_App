@@ -83,16 +83,26 @@ function onReady2(smart)  {
 	var patient = smart.patient;
 	
 	
+	patient.read().then(function() {
+		
+		alert("I'm done with reading");
+		
+	}
+	
+	// patient
 	
 	
-	console.log(patient);
+	// console.log(patient);
 	
-	
+	/*
 	
 var testPromise = new Promise(
     function (resolve, reject) {
+        // if (patient) {
         if (patient) {
             // resolve("fulfilled"); // fulfilled
+	
+			
             resolve(patient); // fulfilled
         } else {
             var reason = new Error('did not work');
@@ -101,25 +111,25 @@ var testPromise = new Promise(
 
     }
 );
+*/
+
+// var myPromise = function () {
+    // testPromise
+        // .then(function (fulfilled) {
+            // // yay, you got a new phone
+            // alert(fulfilled);
+			// console.log(fulfilled);
+         // // output: { brand: 'Samsung', color: 'black' }
+        // })
+        // .catch(function (error) {
+            // // oops, mom don't buy it
+            // alert(error.message);
+         // // output: 'mom is not happy'
+        // });
+// };
 
 
-var myPromise = function () {
-    testPromise
-        .then(function (fulfilled) {
-            // yay, you got a new phone
-            alert(fulfilled);
-			console.log(fulfilled);
-         // output: { brand: 'Samsung', color: 'black' }
-        })
-        .catch(function (error) {
-            // oops, mom don't buy it
-            alert(error.message);
-         // output: 'mom is not happy'
-        });
-};
-
-
- myPromise();
+ // myPromise();
 	
 	
 	
