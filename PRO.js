@@ -79,6 +79,46 @@ function onReady2(smart)  {
 	
 	alert("onReady2");
 	
+	
+	var patient = smart.patient;
+	
+	
+	
+	
+	// console.log(patient);
+	
+	
+	// var pt = patient.read();
+	
+	// console.log(pt.gender);
+	
+	patient.read().then(function(pt) {
+		
+		alert("I'm done!");
+		
+	}
+	
+	/*
+	var willIGetNewPhone = new Promise(
+
+		function (resolve, reject) {
+			if (isMomHappy) {
+				var phone = {
+					brand: 'Samsung',
+					color: 'black'
+				};
+				resolve(phone); // fulfilled
+			} else {
+				var reason = new Error('mom is not happy');
+				reject(reason); // reject
+			}
+
+    }
+);*/
+
+	
+	
+	
 }
 
 
