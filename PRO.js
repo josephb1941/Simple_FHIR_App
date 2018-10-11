@@ -117,7 +117,7 @@ var myPromise = function () {
 };
 
 
- myPromise();
+ testPromise();
 	
 	
 	
