@@ -92,12 +92,16 @@ function onReady2(smart)  {
 	
 	// console.log(pt.gender);
 	
+	
+	// var promise = new Promise(
+		// function(resolve, reject)
+	
 	patient.read().then(function(pt) {
 		
 		alert("I'm done!");
+		console.log(patient);
 		
 	});
-
 	
 	/*
 	var willIGetNewPhone = new Promise(
