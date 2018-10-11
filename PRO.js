@@ -108,6 +108,7 @@ var myPromise = function () {
         .then(function (fulfilled) {
             // yay, you got a new phone
             alert(fulfilled);
+			console.log(fulfilled);
          // output: { brand: 'Samsung', color: 'black' }
         })
         .catch(function (error) {
