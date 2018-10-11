@@ -1,10 +1,10 @@
 function onLoad() {
 
 
-	askMom();
+	// askMom();
 
 
-	// doFHIR();
+	doFHIR();
 	
 	
 	
@@ -72,6 +72,15 @@ function doHappy(msg) {
 }
 
 */
+
+
+
+function onReady2(smart)  {
+	
+	alert("onReady2");
+	
+}
+
 
 function onReady(smart)  {
 	
@@ -232,7 +241,8 @@ var entry = {
  
  function doFHIR() {
  
-	FHIR.oauth2.ready(onReady, onError);
+	// FHIR.oauth2.ready(onReady, onError);
+	FHIR.oauth2.ready(onReady2, onError);
 	
 	
 	// console.log(smart);
