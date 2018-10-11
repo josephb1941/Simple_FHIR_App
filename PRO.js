@@ -85,7 +85,7 @@ function onReady2(smart)  {
 	
 	
 	
-	// console.log(patient);
+	console.log(patient);
 	
 	
 	// var pt = patient.read();
@@ -96,12 +96,12 @@ function onReady2(smart)  {
 	// var promise = new Promise(
 		// function(resolve, reject)
 	
-	patient.read().then(function(pt) {
+	// patient.read().then(function(pt) {
 		
-		alert("I'm done!");
-		console.log(patient);
+		// alert("I'm done!");
+		// console.log(patient);
 		
-	});
+	// });
 	
 	/*
 	var willIGetNewPhone = new Promise(
