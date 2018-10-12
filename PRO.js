@@ -36,7 +36,7 @@ function getData() {
 
 $.when(getData()).done(function(value) {
 	
-	alert("done");
+	return("Something else");
 
 });
 
