@@ -23,6 +23,7 @@ function onLoad() {
 
 var myBool = true;
 
+
 function getData() {
     var deferred = $.Deferred();
 
@@ -34,11 +35,11 @@ function getData() {
     return deferred.promise();
 }
 
-$.when(getData()).done(function(value) {
+// $.when(getData()).done(function(value) {
 	
-	return("Something else");
+	// return("Something else");
 
-});
+// });
 
 
 function consumePromise() {
