@@ -9,7 +9,7 @@ function onLoad() {
 
 	// askMom();
 	
-	alert("I'm here, and trying stuff");
+	// alert("I'm here, and trying stuff");
 
 	consumePromise();
 
