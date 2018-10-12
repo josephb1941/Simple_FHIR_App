@@ -1,10 +1,12 @@
-var ret = $.Deferred();
+var ret = jQuery.Deferred();
 
 
 function onLoad() {
 
 
 	// askMom();
+	
+	alert("I'm here, and trying stuff");
 
 
 	doFHIR();
@@ -80,7 +82,7 @@ function doHappy(msg) {
 
 function onReady2(smart)  {
 	
-	alert("onReady2");
+	// alert("onReady2");
 	
 	
 	var patient = smart.patient;
