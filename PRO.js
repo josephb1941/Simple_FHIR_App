@@ -4,9 +4,9 @@ function onLoad() {
 	promiseMe().then(function(ptData) {
 		
 		console.log(ptData);
-		
-	});
 	
+	});
+
 }
 
 
@@ -28,25 +28,27 @@ function promiseMe() {
 		  
 			var patient = smart.patient;
 			var pt = patient.read();
+			
+				
+			var obv = smart.patient.api.fetchAll({
+				type: 'Observation',
+				query: {}
+			});
+
 
 			//if read() fails
-			$.when(pt).fail(function(patient) {
+			$.when(pt, obv).fail(function(patient) {
 				deferred.reject("read() failed");
 			});
 			
-
 			//if read() succeeds, return the patient resource data
-			$.when(pt).done(function(patient) {
-
+			$.when(pt,obv).done(function(patient) {
 				deferred.resolve(patient);
-
 			});
 
-		} 
-		else 
+		} else 
 			deferred.resolve("Missing property patient");
-	  
-	}
+	  }
 
 	//Hit FHIR API
 	FHIR.oauth2.ready(onReady, onError);
@@ -55,6 +57,12 @@ function promiseMe() {
 	return deferred.promise();
 	 
 }
+
+
+
+
+
+
 
 var myBool = true;
 
