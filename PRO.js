@@ -1,9 +1,10 @@
 
 function onLoad() {
 
-	promiseMe().then(function(ptData) {
+	promiseMe().then(function(ptData, obsData) {
 		
 		console.log(ptData);
+		console.log(obsData);
 	
 	});
 
@@ -36,14 +37,23 @@ function promiseMe() {
 			});
 
 
-			//if read() fails
-			$.when(pt, obv).fail(function(patient) {
+			// //if read() fails
+			// $.when(pt, obv).fail(function(patient) {
+				// deferred.reject("read() failed");
+			// });
+			
+			// //if read() succeeds, return the patient resource data
+			// $.when(pt,obv).done(function(patient) {
+				// deferred.resolve(patient);
+			// });
+
+			$.when(pt, obv).fail(function(patient, observations) {
 				deferred.reject("read() failed");
 			});
 			
 			//if read() succeeds, return the patient resource data
-			$.when(pt,obv).done(function(patient) {
-				deferred.resolve(patient);
+			$.when(pt,obv).done(function(patient, observations) {
+				deferred.resolve(patient, observations);
 			});
 
 		} else 
