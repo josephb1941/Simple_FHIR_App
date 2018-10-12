@@ -23,24 +23,22 @@ function onLoad() {
 }
 
 
+var myBool = true;
+
 function getData() {
     var deferred = $.Deferred();
 
-    $.ajax({
-        'url': 'http://google.com',
-        'success': function(data) {
-            deferred.resolve('yay');
-        },
-        'error': function(error) {
-            deferred.reject('boo');
-        }
-    });
-
+	if(myBool == true)
+		deferred.resolve('yay');
+	else
+		deferred.reject('boo');
+    
     return deferred.promise();
 }
 
 $.when(getData()).done(function(value) {
-    alert(value);
+    // alert(value);
+	alert("done");
 });
 
 getData().then(function(value) {
