@@ -1,7 +1,7 @@
-var ret = jQuery.Deferred();
-var pt; 
+// var ret = jQuery.Deferred();
+// var pt; 
 
-var obv;
+// var obv;
 
 
 function onLoad() {
@@ -11,15 +11,13 @@ function onLoad() {
 	
 	alert("I'm here, and trying stuff");
 
+	consumePromise();
 
 	// doFHIR();
 	
 	// doStuff();
 	
 	
-	
-	
-
 }
 
 
@@ -37,16 +35,26 @@ function getData() {
 }
 
 $.when(getData()).done(function(value) {
-    // alert(value);
+	
 	alert("done");
+
 });
 
-getData().then(function(value) {
-	// alert(value);
-	alert("Yeah, I did finish");
-	
-	console.log(value);
-});
+
+function consumePromise() {
+
+	getData().then(function(value) {
+
+		alert("Yeah, I did finish");
+		
+		console.log(value);
+	});
+
+};
+
+
+
+
 
 function badness() {
 	
@@ -226,15 +234,15 @@ var testPromise = new Promise(
 }
 
 
-$.when(pt, obv).fail(onError);
+// $.when(pt, obv).fail(onError);
 
-$.when(pt, obv).done(function(patient, obv) {
+// $.when(pt, obv).done(function(patient, obv) {
 	
-	alert("All done!");
-	console.log(patient);
-	console.log(obv);
+	// alert("All done!");
+	// console.log(patient);
+	// console.log(obv);
 	
-});
+// });
 
 
 
@@ -395,50 +403,50 @@ $.when(pt, obv).done(function(patient, obv) {
  // }
  
  
- function doStuff() {
+ // function doStuff() {
 	 
-	 var ret = $.Deferred();
+	 // var ret = $.Deferred();
 
-    function onError() {
-      console.log('Loading error', arguments);
-      ret.reject();
-    }
+    // function onError() {
+      // console.log('Loading error', arguments);
+      // ret.reject();
+    // }
 
-    function onReady(smart)  {
-      if (smart.hasOwnProperty('patient')) {
-        var patient = smart.patient;
-        var pt = patient.read();
-        var obv = smart.patient.api.fetchAll({
-                    type: 'Observation',
-                    query: {
-                      code: {
-                        $or: ['http://loinc.org|8302-2', 'http://loinc.org|8462-4',
-                              'http://loinc.org|8480-6', 'http://loinc.org|2085-9',
-                              'http://loinc.org|2089-1', 'http://loinc.org|55284-4']
-                      }
-                    }
-                  });
+    // function onReady(smart)  {
+      // if (smart.hasOwnProperty('patient')) {
+        // var patient = smart.patient;
+        // var pt = patient.read();
+        // var obv = smart.patient.api.fetchAll({
+                    // type: 'Observation',
+                    // query: {
+                      // code: {
+                        // $or: ['http://loinc.org|8302-2', 'http://loinc.org|8462-4',
+                              // 'http://loinc.org|8480-6', 'http://loinc.org|2085-9',
+                              // 'http://loinc.org|2089-1', 'http://loinc.org|55284-4']
+                      // }
+                    // }
+                  // });
 
-        $.when(pt, obv).fail(onError);
+        // $.when(pt, obv).fail(onError);
 
-        $.when(pt, obv).done(function(patient, obv) {
+        // $.when(pt, obv).done(function(patient, obv) {
 			
-			alert("I'm done");
+			// alert("I'm done");
 
 
-          ret.resolve();
-        });
-      } else {
-        onError();
-      }
-    }
+          // ret.resolve();
+        // });
+      // } else {
+        // onError();
+      // }
+    // }
 
-    FHIR.oauth2.ready(onReady, onError);
-    return ret.promise();
+    // FHIR.oauth2.ready(onReady, onError);
+    // return ret.promise();
 	 
 	 
 	 
- }
+ // }
  
  function doFHIR() {
  
