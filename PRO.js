@@ -33,51 +33,40 @@ function onLoad() {
 
  function testDeferred() {
 	 
-	 var ret = $.Deferred();
+	var deferred = $.Deferred();
 
-    function onError() {
-      console.log('Loading error', arguments);
-      ret.reject("It's all bad");
-    }
+	function onError() {
+
+		deferred.reject("It's all bad");
+
+	}
 
     function onReady(smart)  {
       
-	  if (smart.hasOwnProperty('patient')) {
-        var patient = smart.patient;
-        var pt = patient.read();
-        var obv = smart.patient.api.fetchAll({
-                    type: 'Observation',
-                    query: {
-                      code: {
-                        $or: ['http://loinc.org|8302-2', 'http://loinc.org|8462-4',
-                              'http://loinc.org|8480-6', 'http://loinc.org|2085-9',
-                              'http://loinc.org|2089-1', 'http://loinc.org|55284-4']
-                      }
-                    }
-                  });
+		if (smart.hasOwnProperty('patient')) {
+		  
+			var patient = smart.patient;
+			var pt = patient.read();
 
-        $.when(pt, obv).fail(onError);
+			$.when(pt).fail(onError);
 
-        $.when(pt, obv).done(function(patient, obv) {
-			alert("I'm done here");
-			
-			var obsVals = obv;
-			var ptVals = pt;
+			$.when(pt).done(function(patient) {
 
-          ret.resolve("It's all good");
-        });
-		
-      } else {
-        onError();
-      }
+				deferred.resolve(patient);
+
+			});
+
+		} 
+		else 
+			onError();
+      
     }
 
-    FHIR.oauth2.ready(onReady, onError);
-
-    return ret.promise();
-	 
-	 
-	 
+    
+	FHIR.oauth2.ready(onReady, onError);
+    
+	return deferred.promise();
+	 	 
  }
 
 var myBool = true;
