@@ -42,7 +42,8 @@ $.when(getData()).done(function(value) {
 });
 
 getData().then(function(value) {
-	alert(value);
+	// alert(value);
+	alert("Yeah, I did finish");
 });
 
 function badness() {
