@@ -1,4 +1,7 @@
 var ret = jQuery.Deferred();
+var pt; 
+
+var obv;
 
 
 function onLoad() {
@@ -87,9 +90,9 @@ function onReady2(smart)  {
 	
 	var patient = smart.patient;
 	
-	var pt = patient.read();
+	pt = patient.read();
 	
-	var obv = smart.patient.api.fetchAll({
+	obv = smart.patient.api.fetchAll({
 			type: 'Observation',
 			query: {
 			  code: {
