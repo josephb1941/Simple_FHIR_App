@@ -1,3 +1,6 @@
+var ret = $.Deferred();
+
+
 function onLoad() {
 
 
@@ -82,7 +85,7 @@ function onReady2(smart)  {
 	
 	var patient = smart.patient;
 	
-	alert(patient.promise());
+	// alert(patient.promise());
 	
 	
 	// patient.read().then(function(obj) {
@@ -178,58 +181,58 @@ var testPromise = new Promise(
 
 function onReady(smart)  {
 	
-	console.log(smart);
+	// console.log(smart);
 	
 	
 	
 
-var entry = {
-		resource: 
+// var entry = {
+		// resource: 
 		
-	{
-		  "resourceType": "AllergyIntolerance",
-		  "category": "medication",
-		  "criticality": "CRITL",
-		  "recordedDate": "2017-02-28T15:03:00-06:00",
-		  "status": "active",
-		  "type": "allergy",
-		  "onset": "2015-12-15T00:00:00Z",
-		  "patient": {
-			"reference": "Patient/4342012"
-		  },
-		  "reporter": {
-			"reference": "Patient/4342012"
-		  },
-		  "recorder": {
-			"reference": "Practitioner/4342012"
-		  },
-		  "reaction": [
-			{
-			  "manifestation": [
-				{
-				  "text": "Food-code_lab"
-				}
-			  ]
-			}
-		  ],
-		  "note": {
-			"authorReference": {
-			  "reference": "Practitioner/41562141"
-			},
-			"time": "2017-02-28T09:03:00Z",
-			"text": "Note 1"
-		  },
-		  "substance": {
-			"coding": [
-			  {
-				"system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-				"code": "3498"
-			  }
-			]
-		  }
-		}
+	// {
+		  // "resourceType": "AllergyIntolerance",
+		  // "category": "medication",
+		  // "criticality": "CRITL",
+		  // "recordedDate": "2017-02-28T15:03:00-06:00",
+		  // "status": "active",
+		  // "type": "allergy",
+		  // "onset": "2015-12-15T00:00:00Z",
+		  // "patient": {
+			// "reference": "Patient/4342012"
+		  // },
+		  // "reporter": {
+			// "reference": "Patient/4342012"
+		  // },
+		  // "recorder": {
+			// "reference": "Practitioner/4342012"
+		  // },
+		  // "reaction": [
+			// {
+			  // "manifestation": [
+				// {
+				  // "text": "Food-code_lab"
+				// }
+			  // ]
+			// }
+		  // ],
+		  // "note": {
+			// "authorReference": {
+			  // "reference": "Practitioner/41562141"
+			// },
+			// "time": "2017-02-28T09:03:00Z",
+			// "text": "Note 1"
+		  // },
+		  // "substance": {
+			// "coding": [
+			  // {
+				// "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+				// "code": "3498"
+			  // }
+			// ]
+		  // }
+		// }
 
-	}
+	// }
 			
 		
 		
