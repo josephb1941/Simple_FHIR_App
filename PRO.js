@@ -203,7 +203,7 @@ $.when(pt, obv).done(function(patient, obv) {
 	console.log(patient);
 	console.log(obv);
 	
-}
+});
 
 
 
