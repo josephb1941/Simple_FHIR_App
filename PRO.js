@@ -4,6 +4,11 @@
 // var obv;
 
 
+var obsVals = "";
+var ptVals = "";
+
+
+
 function onLoad() {
 
 
@@ -12,8 +17,12 @@ function onLoad() {
 	// alert("I'm here, and trying stuff");
 
 	// consumePromise();
-	testDeferred();
+	testDeferred().then(function(x) {
+		
+		alert(x)
+	});
 
+	
 	// doFHIR();
 	
 	// doStuff();
@@ -28,7 +37,7 @@ function onLoad() {
 
     function onError() {
       console.log('Loading error', arguments);
-      ret.reject();
+      ret.reject("It's all bad");
     }
 
     function onReady(smart)  {
@@ -51,8 +60,11 @@ function onLoad() {
 
         $.when(pt, obv).done(function(patient, obv) {
 			alert("I'm done here");
+			
+			var obsVals = obv;
+			var ptVals = pt;
 
-          ret.resolve();
+          ret.resolve("It's all good");
         });
 		
       } else {
@@ -61,6 +73,7 @@ function onLoad() {
     }
 
     FHIR.oauth2.ready(onReady, onError);
+
     return ret.promise();
 	 
 	 
