@@ -44,6 +44,8 @@ $.when(getData()).done(function(value) {
 getData().then(function(value) {
 	// alert(value);
 	alert("Yeah, I did finish");
+	
+	console.log(value);
 });
 
 function badness() {
