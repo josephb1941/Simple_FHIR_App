@@ -1,55 +1,41 @@
-// var ret = jQuery.Deferred();
-// var pt; 
-
-// var obv;
-
-
-var obsVals = "";
-var ptVals = "";
-
-
 
 function onLoad() {
 
-
-	// askMom();
-	
-	// alert("I'm here, and trying stuff");
-
-	// consumePromise();
-	testDeferred().then(function(x) {
-		alert("hello, I consumed the promise");
-		alert(x);
+	promiseMe().then(function(ptData) {
+		
+		console.log(ptData);
+		
 	});
-
-	
-	// doFHIR();
-	
-	// doStuff();
-	
 	
 }
 
 
- function testDeferred() {
-	 
+function promiseMe() {
+ 
 	var deferred = $.Deferred();
 
+	//If the API call fails
 	function onError() {
 
-		deferred.reject("It's all bad");
+		deferred.reject("It didn't work");
 
 	}
 
-    function onReady(smart)  {
-      
+	//If FHIR call was successful 
+	function onReady(smart)  {
+	  
 		if (smart.hasOwnProperty('patient')) {
 		  
 			var patient = smart.patient;
 			var pt = patient.read();
 
-			$.when(pt).fail(onError);
+			//if read() fails
+			$.when(pt).fail(function(patient) {
+				deferred.reject("read() failed");
+			});
+			
 
+			//if read() succeeds, return the patient resource data
 			$.when(pt).done(function(patient) {
 
 				deferred.resolve(patient);
@@ -58,16 +44,17 @@ function onLoad() {
 
 		} 
 		else 
-			onError();
-      
-    }
+			deferred.resolve("Missing property patient");
+	  
+	}
 
-    
+	//Hit FHIR API
 	FHIR.oauth2.ready(onReady, onError);
-    
+	
+	//return the created promise 
 	return deferred.promise();
-	 	 
- }
+	 
+}
 
 var myBool = true;
 
