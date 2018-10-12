@@ -12,13 +12,40 @@ function onLoad() {
 	alert("I'm here, and trying stuff");
 
 
-	doFHIR();
+	// doFHIR();
+	
+	// doStuff();
 	
 	
 	
 	
 
 }
+
+
+function getData() {
+    var deferred = $.Deferred();
+
+    $.ajax({
+        'url': 'http://google.com',
+        'success': function(data) {
+            deferred.resolve('yay');
+        },
+        'error': function(error) {
+            deferred.reject('boo');
+        }
+    });
+
+    return deferred.promise();
+}
+
+$.when(getData()).done(function(value) {
+    alert(value);
+});
+
+getData().then(function(value) {
+	alert(value);
+});
 
 function badness() {
 	
@@ -210,162 +237,207 @@ $.when(pt, obv).done(function(patient, obv) {
 
 
 
-function onReady(smart)  {
+// function onReady(smart)  {
 	
-	// console.log(smart);
+	// // console.log(smart);
 	
 	
 	
 
-// var entry = {
-		// resource: 
+// // var entry = {
+		// // resource: 
 		
-	// {
-		  // "resourceType": "AllergyIntolerance",
-		  // "category": "medication",
-		  // "criticality": "CRITL",
-		  // "recordedDate": "2017-02-28T15:03:00-06:00",
-		  // "status": "active",
-		  // "type": "allergy",
-		  // "onset": "2015-12-15T00:00:00Z",
-		  // "patient": {
-			// "reference": "Patient/4342012"
-		  // },
-		  // "reporter": {
-			// "reference": "Patient/4342012"
-		  // },
-		  // "recorder": {
-			// "reference": "Practitioner/4342012"
-		  // },
-		  // "reaction": [
-			// {
-			  // "manifestation": [
-				// {
-				  // "text": "Food-code_lab"
-				// }
-			  // ]
-			// }
-		  // ],
-		  // "note": {
-			// "authorReference": {
-			  // "reference": "Practitioner/41562141"
-			// },
-			// "time": "2017-02-28T09:03:00Z",
-			// "text": "Note 1"
-		  // },
-		  // "substance": {
-			// "coding": [
-			  // {
-				// "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-				// "code": "3498"
-			  // }
-			// ]
-		  // }
-		// }
+	// // {
+		  // // "resourceType": "AllergyIntolerance",
+		  // // "category": "medication",
+		  // // "criticality": "CRITL",
+		  // // "recordedDate": "2017-02-28T15:03:00-06:00",
+		  // // "status": "active",
+		  // // "type": "allergy",
+		  // // "onset": "2015-12-15T00:00:00Z",
+		  // // "patient": {
+			// // "reference": "Patient/4342012"
+		  // // },
+		  // // "reporter": {
+			// // "reference": "Patient/4342012"
+		  // // },
+		  // // "recorder": {
+			// // "reference": "Practitioner/4342012"
+		  // // },
+		  // // "reaction": [
+			// // {
+			  // // "manifestation": [
+				// // {
+				  // // "text": "Food-code_lab"
+				// // }
+			  // // ]
+			// // }
+		  // // ],
+		  // // "note": {
+			// // "authorReference": {
+			  // // "reference": "Practitioner/41562141"
+			// // },
+			// // "time": "2017-02-28T09:03:00Z",
+			// // "text": "Note 1"
+		  // // },
+		  // // "substance": {
+			// // "coding": [
+			  // // {
+				// // "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+				// // "code": "3498"
+			  // // }
+			// // ]
+		  // // }
+		// // }
 
-	// }
+	// // }
 			
 		
 		
 	
-	/*
-	smart.api.create(entry, 
+	// /*
+	// smart.api.create(entry, 
 
-		function(e) {
-			alert("success");
-			console.log(e);
-		},
-		function(e) {
+		// function(e) {
+			// alert("success");
+			// console.log(e);
+		// },
+		// function(e) {
 
-			alert("fail");
-			console.log(e);
+			// alert("fail");
+			// console.log(e);
 		
 			
-		});
+		// });
 		
-	*/
+	// */
 	
-	//doHappy(entry), badness());
-	
-	
-	// alert("Do I have it? " + smart.hasOwnProperty('patient'));
-  if (smart.hasOwnProperty('patient')) {
-	var patient = smart.patient;
-	
-	// console.log(patient);
+	// //doHappy(entry), badness());
 	
 	
-	// var pt = patient.read();
+	// // alert("Do I have it? " + smart.hasOwnProperty('patient'));
+  // if (smart.hasOwnProperty('patient')) {
+	// var patient = smart.patient;
 	
-	// console.log(pt.gender);
-	
-	// patient.read().promise();
+	// // console.log(patient);
 	
 	
-	// patient.read().then(function(pt) {
-          // alert("I finished");
-		  // console.log(pt);
-        // });
+	// // var pt = patient.read();
 	
-	// var promise = new Promise(function(resolve, reject) {
-  // // do a thing, possibly async, then…
+	// // console.log(pt.gender);
+	
+	// // patient.read().promise();
+	
+	
+	// // patient.read().then(function(pt) {
+          // // alert("I finished");
+		  // // console.log(pt);
+        // // });
+	
+	// // var promise = new Promise(function(resolve, reject) {
+  // // // do a thing, possibly async, then…
 
-		// if (/* everything turned out fine */) {
-			// resolve("Stuff worked!");
-		// }
-		// else {
-			// reject(Error("It broke"));
-		// }
-	// });
+		// // if (/* everything turned out fine */) {
+			// // resolve("Stuff worked!");
+		// // }
+		// // else {
+			// // reject(Error("It broke"));
+		// // }
+	// // });
 	
-	// alert(JSON.stringify(smart.patient.api));
+	// // alert(JSON.stringify(smart.patient.api));
 	
+	// // var obv = smart.patient.api.fetchAll({
+				// // type: 'Observation',
+				// // query: {
+				  // // // code: {
+					// // $or: ['http://loinc.org|8302-2', 'http://loinc.org|8462-4',
+						  // // 'http://loinc.org|8480-6', 'http://loinc.org|2085-9',
+						  // // 'http://loinc.org|2089-1', 'http://loinc.org|55284-4']
+				  // // }
+				// // }
+
+				
+				
+				// /*
 	// var obv = smart.patient.api.fetchAll({
-				// type: 'Observation',
-				// query: {
-				  // // code: {
-					// $or: ['http://loinc.org|8302-2', 'http://loinc.org|8462-4',
-						  // 'http://loinc.org|8480-6', 'http://loinc.org|2085-9',
-						  // 'http://loinc.org|2089-1', 'http://loinc.org|55284-4']
-				  // }
-				// }
-
+	
+				// type: 'AllergyIntolerance',
 				
-				
-				/*
-	var obv = smart.patient.api.fetchAll({
+				// query: {}
+	// }, {
+		// type: 'Observation',
+		// query: {}
 	
-				type: 'AllergyIntolerance',
-				
-				query: {}
-	}, {
-		type: 'Observation',
-		query: {}
-	
-	}
+	// }
 	
 	
-	).then(function(allergies, obs) {
-		alert("I got my obs");
-		console.log(allergies);
-		// console.log(obs);
+	// ).then(function(allergies, obs) {
+		// alert("I got my obs");
+		// console.log(allergies);
+		// // console.log(obs);
 		
-		});
-  }
-  */
+		// });
+  // }
+  // */
   
   
-  }
-}
+  // }
+// }
  
  
- function onError() {
-  // console.log('Loading error', arguments);
-  // ret.reject();
+ // function onError() {
+  // // console.log('Loading error', arguments);
+  // // ret.reject();
 
   
- }
+ // }
  
+ 
+ function doStuff() {
+	 
+	 var ret = $.Deferred();
+
+    function onError() {
+      console.log('Loading error', arguments);
+      ret.reject();
+    }
+
+    function onReady(smart)  {
+      if (smart.hasOwnProperty('patient')) {
+        var patient = smart.patient;
+        var pt = patient.read();
+        var obv = smart.patient.api.fetchAll({
+                    type: 'Observation',
+                    query: {
+                      code: {
+                        $or: ['http://loinc.org|8302-2', 'http://loinc.org|8462-4',
+                              'http://loinc.org|8480-6', 'http://loinc.org|2085-9',
+                              'http://loinc.org|2089-1', 'http://loinc.org|55284-4']
+                      }
+                    }
+                  });
+
+        $.when(pt, obv).fail(onError);
+
+        $.when(pt, obv).done(function(patient, obv) {
+			
+			alert("I'm done");
+
+
+          ret.resolve();
+        });
+      } else {
+        onError();
+      }
+    }
+
+    FHIR.oauth2.ready(onReady, onError);
+    return ret.promise();
+	 
+	 
+	 
+ }
  
  function doFHIR() {
  
