@@ -18,8 +18,8 @@ function onLoad() {
 
 	// consumePromise();
 	testDeferred().then(function(x) {
-		
-		alert(x)
+		alert("hello, I consumed the promise");
+		alert(x);
 	});
 
 	
