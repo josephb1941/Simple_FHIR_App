@@ -6,7 +6,12 @@ function onLoad() {
 			populatePatientData(ptData);
 			// console.log(ptData);
 			// console.log(obsData);
+			// document.getElementById(pSex).innerHTML += patientData.gender;
 	
+		})
+		.catch(function(error) {
+			console.log(error);
+			// alert("Error");
 		});
 
 }
@@ -16,10 +21,11 @@ function onLoad() {
 function populatePatientData(patientData) {
 	
 	console.log(patientData);
+	alert("load");
 	
 	// alert(patientData.gender);
 	
-	document.getElementById(pSex).innerHTML += patientData.gender;
+	document.getElementById("pSex").innerHTML += patientData.gender;
 	
 	// var gender = patientData.gender;
 
