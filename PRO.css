@@ -1,5 +1,81 @@
+
 #dvMain {
 
-	border: 1px solid black;
+	/* border: 2px solid black; */
+	display: flex;
+	font-family: Helvetica;
+	/* height:98vh; */
+	height:95vh;
+	width: 100%;
+	flex-direction: column;
 
 }
+
+#dvTitle {
+	
+	/* margin: auto;  */
+	/* margin-top: 25px; */
+	display: flex;
+	font-weight: bold;
+	/* border: 1px solid blue; */
+	font-size: 34px;
+	text-decoration: underline;
+	height: 10%;
+	/* align-items: middle; */
+	justify-content: center;
+	/* align-items: center; */
+	/* align-content: center; */
+	
+	
+}
+
+/* #pTitle { */
+	
+	/* justify-self: center; */
+	/* display: flex; */
+	
+	
+/* } */
+
+
+.scopeHeader {
+	
+	font-size: 28px;
+	text-decoration: underline;
+
+	
+}
+
+ 
+/* #dvDemographics { */
+.scope {
+	
+	margin-top: 30px;
+	margin-left: 25px;
+	/* border: 1px solid blue; */
+	/* height: 20%; */
+	/* display: flex; */
+	/* align-items: middle; */
+	
+	
+}
+
+
+
+
+#pName {
+	
+	margin-top: 35px;
+	
+	
+}
+
+
+.scopeDetails {
+
+	font-size: 22px;
+	
+}	
+	
+	
+
