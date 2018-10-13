@@ -48,9 +48,9 @@ function populatePatientData(patientData) {
 	// var lastName = patientData.name[0].family.join(' ');
 	var lastName = "";
 	
-	// console.log(patientData.name[0].family);
+	console.log(patientData.name[0].family);
 	
-	alert("Is array? " + Array.isArray(patientData.name[0].family));
+	// alert("Is array? " + Array.isArray(patientData.name[0].family));
 	
 	document.getElementById("pName").innerHTML += firstName + " " + lastName;
 	
