@@ -17,6 +17,19 @@ function populatePatientData(patientData) {
 	
 	console.log(patientData);
 	
+	alert(patientData.gender);
+	
+	// var gender = patientData.gender;
+
+	// var fname = '';
+	// var lname = '';
+
+	// if (typeof patient.name[0] !== 'undefined') {
+		// fname = patient.name[0].given.join(' ');
+		// lname = patient.name[0].family.join(' ');
+	// }
+
+	
 	
 }
 
