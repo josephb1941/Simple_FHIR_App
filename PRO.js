@@ -1,3 +1,13 @@
+/*
+// Store
+localStorage.setItem("lastname", "Smith");
+// Retrieve
+document.getElementById("result").innerHTML = localStorage.getItem("lastname");
+
+*/
+
+
+
 
 function onLoad() {
 
@@ -18,6 +28,13 @@ function storeData(obj) {
 	
 	
 	alert("Store this object");
+	
+	var objStr = JSON.stringify(obj);
+	
+	localStorage.setItem("allergies", obj);
+	
+	alert(localStorage.getItem("allergies"));
+	
 	
 }
 
