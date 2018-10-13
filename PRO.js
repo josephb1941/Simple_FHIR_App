@@ -30,9 +30,10 @@ function populatePatientData(patientData) {
 	// var gender = patientData.gender;
 
 	var firstName = patientData.name[0].given.join(' ');
-	var lastName = patientData.name[0].given.join(' ');
+	var lastName = patientData.name[0].family.join(' ');
 	
-	alert(firstName + " " + lastName);
+	document.getElementById("pName").innerHTML += firstName + " " + lastName;
+	
 	// var lname = '';
 
 	// if (typeof patient.name[0] !== 'undefined') {
