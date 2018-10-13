@@ -1,7 +1,21 @@
 
 function onLoad() {
 
-	promiseMe()
+	var dt = "2015-02-19";
+	
+	var day = moment(dt);
+	
+	alert(moment(dt).format("M/D/YYYY"));
+	
+	// alert("here");
+
+
+}
+
+
+function doFHIR() {
+	
+		promiseMe()
 		.then(function(ptData, obsData) {
 			populatePatientData(ptData);
 			// console.log(ptData);
@@ -14,8 +28,8 @@ function onLoad() {
 			// // alert("Error");
 		// });
 
+	
 }
-
 
 
 function populatePatientData(patientData) {
@@ -33,6 +47,9 @@ function populatePatientData(patientData) {
 	var lastName = patientData.name[0].family.join(' ');
 	
 	document.getElementById("pName").innerHTML += firstName + " " + lastName;
+	
+	
+	//moment(dt).format("M/D/YYYY"))
 	
 	// var lname = '';
 
