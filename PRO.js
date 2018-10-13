@@ -20,7 +20,7 @@ function doFHIR() {
 		.then(function(ptData, obsData) {
 			populatePatientData(ptData);
 			// console.log(ptData);
-			// console.log(obsData);
+			console.log(obsData);
 			// document.getElementById(pSex).innerHTML += patientData.gender;
 	
 		});
@@ -113,7 +113,8 @@ function promiseMe() {
 			
 				
 			var obv = smart.patient.api.fetchAll({
-				type: 'Observation',
+				// type: 'Observation',
+				type: 'AllergyIntollerances',
 				query: {}
 			});
 
