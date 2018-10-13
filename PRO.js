@@ -45,7 +45,10 @@ function populatePatientData(patientData) {
 	// var gender = patientData.gender;
 
 	var firstName = patientData.name[0].given.join(' ');
-	var lastName = patientData.name[0].family.join(' ');
+	// var lastName = patientData.name[0].family.join(' ');
+	var lastName = "";
+	
+	console.log(patientData.name[0].family);
 	
 	document.getElementById("pName").innerHTML += firstName + " " + lastName;
 	
