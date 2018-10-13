@@ -50,7 +50,7 @@ function populatePatientData(patientData) {
 	document.getElementById("pName").innerHTML += firstName + " " + lastName;
 	
 	
-	var DOB = moment(patientData.birthDate).format("M/D/YYYY"))
+	var DOB = moment(patientData.birthDate).format("M/D/YYYY");
 	
 	document.getElementById("pBirthDate").innerHTML += DOB;
 	
