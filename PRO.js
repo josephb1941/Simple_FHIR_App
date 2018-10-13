@@ -14,6 +14,13 @@ function onLoad() {
 }
 
 
+function storeData(obj) {
+	
+	
+	alert("Store this object");
+	
+}
+
 function doFHIR() {
 	
 		promiseMe()
@@ -21,6 +28,8 @@ function doFHIR() {
 			populatePatientData(ptData);
 			// console.log(ptData);
 			console.log(obsData);
+			
+			storeData(obsData);
 			// document.getElementById(pSex).innerHTML += patientData.gender;
 	
 		});
