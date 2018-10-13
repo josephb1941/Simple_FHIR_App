@@ -21,7 +21,7 @@ function onLoad() {
 function populatePatientData(patientData) {
 	
 	console.log(patientData);
-	alert("load");
+	// alert("load");
 	
 	// alert(patientData.gender);
 	
@@ -29,7 +29,10 @@ function populatePatientData(patientData) {
 	
 	// var gender = patientData.gender;
 
-	// var fname = '';
+	var firstName = patient.name[0].given.join(' ');
+	var lastName = patient.name[0].given.join(' ');
+	
+	alert(firstName + " " + lastName);
 	// var lname = '';
 
 	// if (typeof patient.name[0] !== 'undefined') {
