@@ -48,8 +48,12 @@ function populatePatientData(patientData) {
 	// var lastName = patientData.name[0].family.join(' ');
 	var lastName = "";
 	
+	
+	if(typeof(patientData.name[0].family) == 'string')
+		alert("string");
+	
 	console.log(patientData.name[0].family);
-	console.log(typeof(patientData.name[0].family));
+	// console.log(typeof(patientData.name[0].family));
 	
 	// alert("Is array? " + Array.isArray(patientData.name[0].family));
 	
