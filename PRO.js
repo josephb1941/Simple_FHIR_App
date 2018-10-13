@@ -1,14 +1,15 @@
 
 function onLoad() {
 
-	var dt = "2015-02-19";
+	// var dt = "2015-02-19";
 	
-	var day = moment(dt);
+	// var day = moment(dt);
 	
-	alert(moment(dt).format("M/D/YYYY"));
+	// alert(moment(dt).format("M/D/YYYY"));
 	
 	// alert("here");
 
+	doFHIR();
 
 }
 
