@@ -8,11 +8,11 @@ function onLoad() {
 			// console.log(obsData);
 			// document.getElementById(pSex).innerHTML += patientData.gender;
 	
-		})
-		.catch(function(error) {
-			console.log(error);
-			// alert("Error");
 		});
+		// .catch(function(error) {
+			// console.log(error);
+			// // alert("Error");
+		// });
 
 }
 
