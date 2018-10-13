@@ -35,10 +35,10 @@ function storeData(obj) {
 	
 	alert(localStorage.getItem("allergies"));
 	
-	var objAgain = JSON.parse(localStorage.getItem("allergies"));
+	// var objAgain = JSON.parse(localStorage.getItem("allergies"));
 	
 	console.log("Did it work?");
-	console.log(objAgain);
+	console.log(localStorage.getItem("allergies"));
 	
 	
 }
