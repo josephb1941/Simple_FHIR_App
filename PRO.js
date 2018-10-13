@@ -66,7 +66,7 @@ function populatePatientData(patientData) {
 	if(typeof(patientData.name[0].family) == 'string')
 		lastName = patientData.name[0].family;
 	else
-		alert("something else");
+		lastName = patient.name[0].family.join(' ');
 	
 	// console.log(patientData.name[0].family);
 	// console.log(typeof(patientData.name[0].family));
