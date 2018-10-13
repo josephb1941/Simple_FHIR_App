@@ -17,7 +17,9 @@ function populatePatientData(patientData) {
 	
 	console.log(patientData);
 	
-	alert(patientData.gender);
+	// alert(patientData.gender);
+	
+	document.getElementById(pSex).innerHTML += patientData.gender;
 	
 	// var gender = patientData.gender;
 
