@@ -114,7 +114,7 @@ function promiseMe() {
 				
 			var obv = smart.patient.api.fetchAll({
 				// type: 'Observation',
-				type: 'AllergyIntollerances',
+				type: 'AllergyIntolerance',
 				query: {}
 			});
 
