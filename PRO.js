@@ -51,6 +51,8 @@ function populatePatientData(patientData) {
 	
 	if(typeof(patientData.name[0].family) == 'string')
 		alert("string");
+	else
+		alert("something else");
 	
 	console.log(patientData.name[0].family);
 	// console.log(typeof(patientData.name[0].family));
