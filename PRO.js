@@ -546,21 +546,21 @@ var testPromise = new Promise(
 	 
  // }
  
- function doFHIR() {
+ // function doFHIR() {
  
-	// FHIR.oauth2.ready(onReady, onError);
-	FHIR.oauth2.ready(onReady2, onError);
+	// // FHIR.oauth2.ready(onReady, onError);
+	// FHIR.oauth2.ready(onReady2, onError);
 	
 	
-	// console.log(smart);
+	// // console.log(smart);
 	
 	
-	// alert(FHIR);
+	// // alert(FHIR);
 	
-	// alert("FHIR FIRE!");
+	// // alert("FHIR FIRE!");
 	
 	
- }
+ // }
 
 
  /*
