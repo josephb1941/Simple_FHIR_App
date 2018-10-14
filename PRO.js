@@ -144,14 +144,14 @@ function populateAllergies(allergies) {
 	
 	var substance = allergy1.substance;
 	
-	console.log("reaction")
+	console.log("reaction");
 	console.log(reaction);
 
 	// console.log("reaction")
 	// console.log(reaction);
 	
 	// var substance = allergy1.substance;
-	)
+	
 	
 }
 
