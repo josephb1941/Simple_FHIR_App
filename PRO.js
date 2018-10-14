@@ -94,8 +94,10 @@ function populatePatientData(patientData) {
 	  console.log('str is string');
 }
 */
-	if(typeof(patientData.name[0].family) == 'string')
+	if(typeof(patientData.name[0].family) == 'string') {
 		lastName = patientData.name[0].family;
+		alert("string");
+	}
 	else
 		lastName = patientData.name[0].family.join(' ');
 	
