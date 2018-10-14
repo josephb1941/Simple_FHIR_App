@@ -138,7 +138,7 @@ function populateAllergies(allergies) {
 	
 	// alert(allergies.
 	
-	alert("Num allergies: " + allergies.length);
+	// alert("Num allergies: " + allergies.length);
 	
 	var allergy1 = allergies[0];
 	
@@ -159,7 +159,26 @@ function populateAllergies(allergies) {
 	
 	var substanceText = substance.text;
 	
-	alert("Substance: " + substanceText);
+	// alert("Substance: " + substanceText);
+	
+	// document.getElementById("olAllergies").innerHTML += 'Substance: " + substanceText;
+	
+	var listRoot = document.getElementById("olAllergies");
+	
+	var listItem = document.createElement("li");
+	
+	listItem.innerHTML = 'Substance: " + substanceText;
+	
+	listRoot.appendChild(listItem);
+	
+	/*
+	var para = document.createElement("p");
+var node = document.createTextNode("This is new.");
+para.appendChild(node);
+
+var element = document.getElementById("div1");
+element.appendChild(para);
+*/
 
 	
 	// var substance = allergy1.substance;
