@@ -152,6 +152,8 @@ function populateAllergies(allergies) {
 	
 	console.log("substance");
 	console.log(substance);
+	
+	alert(substance.text);
 
 	
 	// var substance = allergy1.substance;
