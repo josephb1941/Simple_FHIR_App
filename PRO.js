@@ -133,10 +133,25 @@ function populatePatientData(patientData) {
 
 function populateAllergies(allergies) {
 	
-	alert("show alergies");
+	// alert("show alergies");
 	console.log(allergies);
 	
+	// alert(allergies.
 	
+	var allergy1 = allergies[0];
+	
+	var reaction = allergy1.reaction;
+	
+	var substance = allergy1.substance;
+	
+	console.log("reaction")
+	console.log(reaction);
+
+	// console.log("reaction")
+	// console.log(reaction);
+	
+	// var substance = allergy1.substance;
+	)
 	
 }
 
