@@ -144,6 +144,8 @@ function populateAllergies(allergies) {
 	
 	var substance = allergy1.substance;
 	
+	alert(reaction.severity);
+	
 	console.log("reaction");
 	console.log(reaction);
 
