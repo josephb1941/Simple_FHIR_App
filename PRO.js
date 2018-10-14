@@ -77,7 +77,7 @@ function populatePatientData(patientData) {
 	
 	// alert(patientData.gender);
 	
-	document.getElementById("pSex").innerHTML += patientData.gender;
+	document.getElementById("pSex").innerHTML += "<span class='detail'>" + patientData.gender + "</span>";
 	
 	// var gender = patientData.gender;
 
