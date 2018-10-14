@@ -46,12 +46,18 @@ function storeData(obj) {
 function doFHIR() {
 	
 		promiseMe()
-		.then(function(ptData, obsData) {
+		.then(function(ptData, ptAllergies) {
 			populatePatientData(ptData);
 			// console.log(ptData);
-			console.log(obsData);
+			// console.log(obsData);
+			console.log(ptAllergies);
 			
-			storeData(obsData);
+			populateAllergies(ptAllergies);
+			
+			
+			// function populateAller
+			
+			// storeData(obsData);
 			// document.getElementById(pSex).innerHTML += patientData.gender;
 	
 		});
@@ -121,6 +127,15 @@ function populatePatientData(patientData) {
 		// lname = patient.name[0].family.join(' ');
 	// }
 
+	
+	
+}
+
+function populateAllergies(allergies) {
+	
+	alert("show alergies");
+	console.log(allergies);
+	
 	
 	
 }
