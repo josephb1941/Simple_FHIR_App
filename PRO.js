@@ -138,6 +138,8 @@ function populateAllergies(allergies) {
 	
 	// alert(allergies.
 	
+	alert("Num allergies: " + alergies.length);
+	
 	var allergy1 = allergies[0];
 	
 	var reaction = allergy1.reaction;
