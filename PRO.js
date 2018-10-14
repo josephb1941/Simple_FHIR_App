@@ -145,6 +145,12 @@ function populateAllergies(allergies) {
 	var reaction = allergy1.reaction;
 
 	var severity = reaction[0].severity;
+	
+	var manifestation = reaction[0].manifestation[0].text;
+	
+	alert(manifestation);
+	
+	
 
 	
 	var substance = allergy1.substance;
@@ -167,7 +173,9 @@ function populateAllergies(allergies) {
 	
 	var listItem = document.createElement("li");
 	
-	var allergyString = "Substance: " + substanceText + "</br>Reaction: " + reaction + "	Severity: " + severity;
+	
+	//Reaction: " + reaction + "	
+	var allergyString = "Substance: " + substanceText + "</br>Severity: " + severity; 
 	
 	listItem.innerHTML = allergyString;
 	
