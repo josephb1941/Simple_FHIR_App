@@ -94,12 +94,13 @@ function populatePatientData(patientData) {
 	  console.log('str is string');
 }
 */
-	if(typeof(patientData.name[0].family) == 'string') {
-		lastName = patientData.name[0].family;
-		alert("string");
-	}
-	else
-		lastName = patientData.name[0].family.join(' ');
+	// if(typeof(patientData.name[0].family) == 'string') {
+		// lastName = patientData.name[0].family;
+		// alert("string");
+	// }
+	// else
+		// lastName = patientData.name[0].family.join(' ');
+	lastName = patientData.name[0].family.join(' ');
 	
 	// console.log(patientData.name[0].family);
 	// console.log(typeof(patientData.name[0].family));
