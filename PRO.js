@@ -113,12 +113,12 @@ function populatePatientData(patientData) {
 	
 	// alert("Is array? " + Array.isArray(patientData.name[0].family));
 	
-	document.getElementById("pName").innerHTML += firstName + " " + lastName;
+	document.getElementById("pName").innerHTML += "<span class='detail'>" + firstName + " " + lastName + "</span>";
 	
 	
 	var DOB = moment(patientData.birthDate).format("M/D/YYYY");
 	
-	document.getElementById("pBirthDate").innerHTML += DOB;
+	document.getElementById("pBirthDate").innerHTML += "<span class='detail'>" + DOB + "</span>";
 	
 	// var lname = '';
 
