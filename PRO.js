@@ -148,7 +148,7 @@ function populateAllergies(allergies) {
 	
 	listItem.appendChild(spanSubstance);
 	
-	listRoot.appendChild(listItem);
+	// listRoot.appendChild(listItem);
 	
 	
 	// var allergyString = "Substance: <i>" + substanceText + "</i></br>Reaction: <i>" + manifestation + "</i></br>Severity: <i>" + severity + "</i>";
