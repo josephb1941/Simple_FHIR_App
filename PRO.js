@@ -160,7 +160,7 @@ function populateAllergies(allergies) {
 	var spanManifestation = createDetail(manifestationHTML);
 	
 	
-	listItem = document.createElement("li");
+	// listItem = document.createElement("li");
 	
 	listItem.appendChild(spanSubstance);
 	
