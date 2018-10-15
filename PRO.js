@@ -92,7 +92,11 @@ function populatePatientData(patientData) {
 	
 	var DOB = moment(patientData.birthDate).format("M/D/YYYY");
 	
-	document.getElementById("pBirthDate").innerHTML += "<span class='detail'>" + DOB + "</span>";
+	// document.getElementById("pBirthDate").innerHTML += "<span class='detail'>" + DOB + "</span>";
+	
+	var spanDOB = createDetail(DOB);
+	
+	document.getElementById("pBirthDate").appendChild(spanDOB);
 	
 	
 	
