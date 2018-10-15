@@ -142,7 +142,7 @@ function populateAllergies(allergies) {
 	
 	var substanceHTML = "Substance: " + substanceText;
 	
-	var spanSubstance = createDetail(substanceHTML);
+	var spanSubstance = createDetail("<br>" + substanceHTML);
 	
 	// console.log(substanceOther);
 	
