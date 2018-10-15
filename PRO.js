@@ -164,6 +164,8 @@ function populateAllergies(allergies) {
 	
 	listItem.appendChild(spanManifestation);
 	
+	alert(listItem.innerHTML);
+	
 	listRoot.appendChild(listItem);
 	
 	// listRoot = document.getElementById("olAllergies");
