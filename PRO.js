@@ -115,15 +115,11 @@ function populateAllergies(allergies) {
 	
 	var manifestation = reaction[0].manifestation[0].text;
 	
-	// alert(manifestation);
-	
-	
-
 	
 	var substance = allergy1.substance;
 	
 	
-	// alert(reaction[0].severity);
+	
 	
 	console.log("substance");
 	console.log(substance);
@@ -140,12 +136,19 @@ function populateAllergies(allergies) {
 	
 	var listItem = document.createElement("li");
 	
+	var substanceHTML = "Substance: " + substanceText;
 	
-	//
-	// var allergyString = "Substance: " + substanceText + "</br>Severity: " + severity; 
-	var allergyString = "Substance: <i>" + substanceText + "</i></br>Reaction: <i>" + manifestation + "</i></br>Severity: <i>" + severity + "</i>";
+	var substanceOther = createDetail(substanceHTML);
 	
-	listItem.innerHTML = allergyString;
+	console.log(substanceOther);
+	
+	
+	
+	
+	
+	// var allergyString = "Substance: <i>" + substanceText + "</i></br>Reaction: <i>" + manifestation + "</i></br>Severity: <i>" + severity + "</i>";
+	
+	// listItem.innerHTML = allergyString;
 	
 	/* 	var reaction = allergy1.reaction;
 
