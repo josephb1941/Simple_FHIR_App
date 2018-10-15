@@ -150,7 +150,7 @@ function populateAllergies(allergies) {
 	
 	// console.log(substanceOther);
 	
-	listItem.appendChild(spanSubstance);
+	listItem.appendChild(substanceHTML);
 	
 	// listRoot.appendChild(listItem);
 	
