@@ -146,13 +146,15 @@ function populateAllergies(allergies) {
 	// var spanSubstance = createDetail(substanceHTML);
 	var spanSubstance = createDetail(substanceText);
 	
-	var substanceHTML = "Substance: " + spanSubstance;
+	// var substanceHTML = "Substance: " + spanSubstance;
+	
+	listItem.innerHTML = "Substance: " + spanSubstance;
 	
 	// console.log(substanceOther);
 	
-	listItem.appendChild(substanceHTML);
+	// listItem.appendChild(substanceHTML);
 	
-	// listRoot.appendChild(listItem);
+	listRoot.appendChild(listItem);
 	
 	
 	// var allergyString = "Substance: <i>" + substanceText + "</i></br>Reaction: <i>" + manifestation + "</i></br>Severity: <i>" + severity + "</i>";
