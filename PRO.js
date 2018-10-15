@@ -28,25 +28,6 @@ function onLoad() {
 }
 
 
-function storeData(obj) {
-	
-	
-	alert("Store this object");
-	
-	var objStr = JSON.stringify(obj);
-	
-	localStorage.setItem("allergies", obj);
-	
-	alert(localStorage.getItem("allergies"));
-	
-	// var objAgain = JSON.parse(localStorage.getItem("allergies"));
-	
-	console.log("Did it work?");
-	console.log(localStorage.getItem("allergies"));
-	
-	
-}
-
 function doFHIR() {
 	
 		promiseMe()
@@ -187,7 +168,7 @@ function populateAllergies(allergies) {
 	
 	var manifestation = reaction[0].manifestation[0].text;
 	
-	alert(manifestation);
+	// alert(manifestation);
 	
 	
 
