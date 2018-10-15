@@ -19,6 +19,10 @@ function onLoad() {
 	
 	// alert("here");
 
+	
+//	document.getElementById("pName").innerHTML += "hello";
+	
+	
 	doFHIR();
 
 }
@@ -70,14 +74,43 @@ function doFHIR() {
 }
 
 
+function createDetail(strDetail) {
+	
+	var spanDetail = document.createElement("span");
+	
+	spanDetail.className = "detail";
+	
+	spanDetail.innerHTML = strDetail;
+	
+	return spanDetail;
+	
+	
+	
+	
+}
+
 function populatePatientData(patientData) {
 	
 	console.log(patientData);
-	alert("load");
+	// alert("load");
 	
 	// alert(patientData.gender);
 	
-	document.getElementById("pSex").innerHTML += "<span class='detail'>" + patientData.gender + "</span>";
+	var spanGender = createDetail(patientData.gender);
+	
+	// document.getElementById("pSex").innerHTML += "<span class='detail'>" + patientData.gender + "</span>";
+	document.getElementById("pSex").appendChild(spanGender);
+	
+	/*
+		var detail = document.createElement("span");
+	
+	detail.className = "detail";
+	
+	detail.innerHTML = "hello";
+	
+	document.getElementById("pName").appendChild(detail);
+	
+*/
 	
 	// var gender = patientData.gender;
 
