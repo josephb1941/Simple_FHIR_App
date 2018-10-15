@@ -80,7 +80,7 @@ function createDetail(strDetail) {
 	
 	spanDetail.className = "detail";
 	
-	spanDetail.innerHTML = strDetail + "xxx";
+	spanDetail.innerHTML = strDetail;
 	
 	return spanDetail;
 	
@@ -116,7 +116,8 @@ function populatePatientData(patientData) {
 
 	var firstName = patientData.name[0].given.join(' ');
 	// var lastName = patientData.name[0].family.join(' ');
-	var lastName = "";
+	 // lastName = "";
+	var lastName = patientData.name[0].family.join(' ');
 	
 	/*
 	//Use
@@ -139,14 +140,19 @@ function populatePatientData(patientData) {
 	// }
 	// else
 		// lastName = patientData.name[0].family.join(' ');
-	lastName = patientData.name[0].family.join(' ');
+	// lastName = patientData.name[0].family.join(' ');
 	
 	// console.log(patientData.name[0].family);
 	// console.log(typeof(patientData.name[0].family));
 	
 	// alert("Is array? " + Array.isArray(patientData.name[0].family));
 	
-	document.getElementById("pName").innerHTML += "<span class='detail'>" + firstName + " " + lastName + "</span>";
+	// document.getElementById("pName").innerHTML += "<span class='detail'>" + firstName + " " + lastName + "</span>";
+	
+	var spanName = createDetail(firstName + " " + lastName);
+	
+	// document.getElementById("pName").innerHTML += "<span class='detail'>" + firstName + " " + lastName + "</span>";
+	document.getElementById("pName").appendChild(spanName);
 	
 	
 	var DOB = moment(patientData.birthDate).format("M/D/YYYY");
