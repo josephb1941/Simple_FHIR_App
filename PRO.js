@@ -80,7 +80,7 @@ function createDetail(strDetail) {
 	
 	spanDetail.className = "detail";
 	
-	spanDetail.innerHTML = strDetail;
+	spanDetail.innerHTML = strDetail + "xxx";
 	
 	return spanDetail;
 	
