@@ -75,64 +75,18 @@ function populatePatientData(patientData) {
 	console.log(patientData);
 	// alert("load");
 	
-	// alert(patientData.gender);
 	
 	var spanGender = createDetail(patientData.gender);
 	
-	// document.getElementById("pSex").innerHTML += "<span class='detail'>" + patientData.gender + "</span>";
 	document.getElementById("pSex").appendChild(spanGender);
 	
-	/*
-		var detail = document.createElement("span");
-	
-	detail.className = "detail";
-	
-	detail.innerHTML = "hello";
-	
-	document.getElementById("pName").appendChild(detail);
-	
-*/
-	
-	// var gender = patientData.gender;
 
 	var firstName = patientData.name[0].given.join(' ');
-	// var lastName = patientData.name[0].family.join(' ');
-	 // lastName = "";
 	var lastName = patientData.name[0].family.join(' ');
 	
-	/*
-	//Use
-	let nr = 5;
 
-	if (typeof nr === 'number') {
-	  console.log('nr is number');
-	}
-
-
-	let str = 'hi';
-
-	if (typeof str === 'string') {
-	  console.log('str is string');
-}
-*/
-	// if(typeof(patientData.name[0].family) == 'string') {
-		// lastName = patientData.name[0].family;
-		// alert("string");
-	// }
-	// else
-		// lastName = patientData.name[0].family.join(' ');
-	// lastName = patientData.name[0].family.join(' ');
-	
-	// console.log(patientData.name[0].family);
-	// console.log(typeof(patientData.name[0].family));
-	
-	// alert("Is array? " + Array.isArray(patientData.name[0].family));
-	
-	// document.getElementById("pName").innerHTML += "<span class='detail'>" + firstName + " " + lastName + "</span>";
-	
 	var spanName = createDetail(firstName + " " + lastName);
 	
-	// document.getElementById("pName").innerHTML += "<span class='detail'>" + firstName + " " + lastName + "</span>";
 	document.getElementById("pName").appendChild(spanName);
 	
 	
@@ -140,13 +94,6 @@ function populatePatientData(patientData) {
 	
 	document.getElementById("pBirthDate").innerHTML += "<span class='detail'>" + DOB + "</span>";
 	
-	// var lname = '';
-
-	// if (typeof patient.name[0] !== 'undefined') {
-		// fname = patient.name[0].given.join(' ');
-		// lname = patient.name[0].family.join(' ');
-	// }
-
 	
 	
 }
