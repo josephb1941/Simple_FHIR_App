@@ -151,6 +151,8 @@ function populateAllergies(allergies) {
 	
 	listItem.innerHTML = "Substance: " + spanSubstance.innerHTML;
 	
+	alert(listItem.innerHTML);
+	
 	// console.log(substanceOther);
 	
 	// listItem.appendChild(substanceHTML);
