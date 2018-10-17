@@ -146,8 +146,8 @@ function populateAllergies(allergies) {
 	// var spanSubstance = createDetail(substanceHTML);
 	var spanSubstance = createDetail(substanceText);
 	
-	alert(spanSubstance.innerHTML);
-	// var substanceHTML = "Substance: " + spanSubstance;
+	// alert(spanSubstance.innerHTML);
+	// // var substanceHTML = "Substance: " + spanSubstance;
 	
 	listItem.innerHTML = "Substance: " + spanSubstance.innerHTML;
 	
@@ -162,14 +162,22 @@ function populateAllergies(allergies) {
 	
 	
 	
-	var manifestationHTML = "<br>Manifestation: " + manifestation;
+	// var manifestationHTML = "<br>Manifestation: " + manifestation;
 	
-	var spanManifestation = createDetail(manifestationHTML);
+	// var spanManifestation = createDetail(manifestationHTML);
+	
+	listItem = document.createElement("li");
+	
+	var spanManifestation = createDetail(manifestation);
+	
+	listItem.innerHTML = "Manifestation: " + spanManifestation.innerHTML;
+	
+	
 	
 	
 	// listItem = document.createElement("li");
 	
-	listItem.appendChild(spanManifestation);
+	listItem.appendChild(listItem);
 	
 	// alert(listItem.innerHTML);
 	
