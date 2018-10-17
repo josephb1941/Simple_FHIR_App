@@ -137,7 +137,7 @@ function populateAllergies(allergies) {
 	var listRoot = document.getElementById("olAllergies");
 	
 	// var listItem = do
-	cument.createElement("li");
+	document.createElement("li");
 	
 	// // var substanceHTML = "Substance: " + substanceText;
 	
