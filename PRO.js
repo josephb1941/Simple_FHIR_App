@@ -146,7 +146,7 @@ function populateAllergies(allergies) {
 	// var spanSubstance = createDetail(substanceHTML);
 	var spanSubstance = createDetail(substanceText);
 	
-	// alert(spanSubstance.innerHTML);
+	alert(spanSubstance.innerHTML);
 	// // var substanceHTML = "Substance: " + spanSubstance;
 	
 	listItem.innerHTML = "Substance: " + spanSubstance;
