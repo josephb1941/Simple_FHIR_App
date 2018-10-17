@@ -159,14 +159,14 @@ function populateAllergies(allergies) {
 	
 	
 	
-	listItem = document.createElement("li");
+	// listItem = document.createElement("li");
 	
-	var spanManifestation = createDetail(manifestation);
+	// var spanManifestation = createDetail(manifestation);
 	
-	listItem.innerHTML = "Manifestation: " + spanManifestation.innerHTML;
+	// listItem.innerHTML = "Manifestation: " + spanManifestation.innerHTML;
 
 	
-	listRoot.appendChild(listItem);
+	// listRoot.appendChild(listItem);
 	
 	
 	
