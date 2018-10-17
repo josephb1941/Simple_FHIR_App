@@ -125,8 +125,6 @@ function populateAllergies(allergies) {
 	
 	
 	
-	console.log("substance");
-	console.log(substance);
 	
 	// alert(substance.text);
 	
@@ -138,18 +136,19 @@ function populateAllergies(allergies) {
 	
 	var listRoot = document.getElementById("olAllergies");
 	
-	var listItem = document.createElement("li");
+	// var listItem = do
+	cument.createElement("li");
 	
-	// var substanceHTML = "Substance: " + substanceText;
+	// // var substanceHTML = "Substance: " + substanceText;
 	
 	
-	// var spanSubstance = createDetail(substanceHTML);
-	var spanSubstance = createDetail(substanceText);
+	// // var spanSubstance = createDetail(substanceHTML);
+	// var spanSubstance = createDetail(substanceText);
 	
-	alert(spanSubstance);
-	// // var substanceHTML = "Substance: " + spanSubstance;
+	// alert(spanSubstance);
+	// // // var substanceHTML = "Substance: " + spanSubstance;
 	
-	listItem.innerHTML = "Substance: " + spanSubstance;
+	// listItem.innerHTML = "Substance: " + spanSubstance;
 	
 	// alert(listItem.innerHTML);
 	
@@ -157,7 +156,7 @@ function populateAllergies(allergies) {
 	
 	// listItem.appendChild(substanceHTML);
 	
-	listRoot.appendChild(listItem);
+	// listRoot.appendChild(listItem);
 	
 	
 	
@@ -173,8 +172,11 @@ function populateAllergies(allergies) {
 	
 	
 	
-	// var allergyString = "Substance: <i>" + substanceText + "</i></br>Reaction: <i>" + manifestation + "</i></br>Severity: <i>" + severity + "</i>";
+	var allergyString = "Substance: <i>" + substanceText + "</i></br>Reaction: <i>" + manifestation + "</i></br>Severity: <i>" + severity + "</i>";
 	
+	listItem.innerHTML = allergyString;
+	
+	listRoot.appendChild(listItem);
 	
 	
 	// var manifestationHTML = "<br>Manifestation: " + manifestation;
@@ -197,7 +199,7 @@ function populateAllergies(allergies) {
 	
 	// listRoot = document.getElementById("olAllergies");
 	
-	// listItem.innerHTML = allergyString;
+	listItem.innerHTML = allergyString;
 	
 	/* 	var reaction = allergy1.reaction;
 
